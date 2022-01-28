@@ -22,10 +22,19 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: sudo apt-get install -y xvfb wget
-    - run: |
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        sudo dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
-    - run: export DISPLAY=':99.0'
-    - run: Xvfb :99 -screen 0 1440x900x24 > /dev/null 2>&1 &
+    - name: Install Xvfb 
+      run: sudo apt-get install -y xvfb wget
+    - name: Dowload browsers
+      run: |
+        chmod +x ./scripts/download_browsers.sh
+        ./scripts/download_browsers.sh
+
+    - name: Install Google Chrome
+      run: |
+        chmod +x ./scripts/install_chrome.sh
+        ./scripts/install_chrome.sh
+    - name: Start Xvfb
+      run: |
+        export DISPLAY=':99.0'
+        Xvfb :99 -screen 0 1440x900x24 > /dev/null 2>&1 &
     - run: npm test -- --verbose
