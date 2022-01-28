@@ -1,4 +1,8 @@
+screens
+tests_output
+
 # Logs
+
 logs
 *.log
 npm-debug.log*
