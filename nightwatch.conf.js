@@ -92,7 +92,8 @@ module.exports = {
           args: [
             '--no-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu'
+            '--disable-gpu',
+            '--start-maximized'
             //'--ignore-certificate-errors',
             //'--allow-insecure-localhost',
             //'--headless'
