@@ -14,7 +14,7 @@ This is a Github Actions enabled sample project which runs the examples bundled 
 
 ## Run the Tests
 
-Clone the repository or click the "Use the teamplate" button. Then install the dependencies and run the tests:
+Clone the repository or click the "Use this template" button. Then install the dependencies and run the tests:
 
 ```
 npm install
