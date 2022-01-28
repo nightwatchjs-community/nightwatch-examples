@@ -26,6 +26,11 @@ module.exports = {
 
   webdriver: {},
 
+  window_size: {
+    width: 1380,
+    height: 1200
+  },
+
   test_settings: {
     default: {
       disable_error_log: false,
