@@ -91,6 +91,7 @@ module.exports = {
           w3c: true,
           args: [
             '--no-sandbox',
+            '--disable-dev-shm-usage',
             '--start-maximized'
             //'--ignore-certificate-errors',
             //'--allow-insecure-localhost',
