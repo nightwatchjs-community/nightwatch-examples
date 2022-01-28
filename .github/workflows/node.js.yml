@@ -23,12 +23,9 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: mkdir -p screens
-    
-    - name: Start Xvfb
-      run: |
-        export DISPLAY=':99.0'
-        Xvfb :99 -screen 0 1440x900x24 > /dev/null 2>&1 &
-    - run: npm test -- --verbose
+
+    - run: sudo apt-get install xvfb
+    - run: xvfb-run --auto-servernum npm test
 
     - name: Upload screenshots
       if: always()
