@@ -22,17 +22,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - name: Install Xvfb 
+    - name: Install Xvfb
       run: sudo apt-get install -y xvfb wget
     - name: Dowload browsers
       run: |
         chmod +x ./scripts/download_browsers.sh
         ./scripts/download_browsers.sh
 
-    - name: Install Google Chrome
+    - name: Install Firefox
       run: |
-        chmod +x ./scripts/install_chrome.sh
-        ./scripts/install_chrome.sh
+        chmod +x ./scripts/install_firefox.sh
+        ./scripts/install_firefox.sh
     - name: Start Xvfb
       run: |
         export DISPLAY=':99.0'
