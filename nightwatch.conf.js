@@ -28,7 +28,6 @@ module.exports = {
 
   test_settings: {
     default: {
-      disable_colors: true,
       disable_error_log: false,
       launch_url: 'https://nightwatchjs.org',
 

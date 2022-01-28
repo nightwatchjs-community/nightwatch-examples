@@ -4,7 +4,7 @@
   "description": "A Nightwatch 2 example project which runs the bundled examples in Github Actions against Google Chrome",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch --env chrome --verbose &> logs/nightwatch_verbose.log"
+    "test": "nightwatch --env chrome --verbose"
   },
   "repository": {
     "type": "git",
