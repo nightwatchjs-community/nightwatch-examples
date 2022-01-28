@@ -4,7 +4,7 @@
   "description": "A Nightwatch 2 example project which runs the bundled examples in Github Actions against Google Chrome",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch --env firefox examples/tests/ecosia.js"
+    "test": "nightwatch --env chrome examples/tests/ecosia.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/nightwatchjs/nightwatch-examples#readme",
   "devDependencies": {
-    "chromedriver": "^97.0.2",
     "geckodriver": "^3.0.1",
     "nightwatch": "^2.0.1"
   }

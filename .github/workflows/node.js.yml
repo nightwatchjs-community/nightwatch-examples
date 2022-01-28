@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,19 +22,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - name: Install Xvfb
-      run: sudo apt-get install -y xvfb wget
-    - name: Dowload browsers
-      run: |
-        chmod +x ./scripts/download_browsers.sh
-        ./scripts/download_browsers.sh
-
-    - name: Install Firefox
-      run: |
-        chmod +x ./scripts/install_firefox.sh
-        ./scripts/install_firefox.sh
+    
     - name: Start Xvfb
       run: |
         export DISPLAY=':99.0'
         Xvfb :99 -screen 0 1440x900x24 > /dev/null 2>&1 &
     - run: npm test -- --verbose
+
+    - name: Upload screenshots
+      if: always()
+      uses: actions/upload-artifact@v2.2.0
+      with:
+        name: Screenshots
+        path: screens/
+        retention-days: 1
+
+    - name: Display structure of downloaded files
+      if: always()
+      run: ls -R
+      working-directory: screens/
