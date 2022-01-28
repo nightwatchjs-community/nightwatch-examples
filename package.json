@@ -24,6 +24,6 @@
   "homepage": "https://github.com/nightwatchjs/nightwatch-examples#readme",
   "devDependencies": {
     "chromedriver": "^97.0.2",
-    "nightwatch": "^2.0.0-dev.24"
+    "nightwatch": "^2.0.2"
   }
 }
