@@ -24,7 +24,8 @@ jobs:
     - run: npm ci
     - run: mkdir -p screens logs
     - run: sudo apt-get install xvfb
-    - run: xvfb-run --auto-servernum npm test
+    - name: Run Nightwatch tests
+      run: xvfb-run --auto-servernum npm test -- --env chrome --verbose
 
     - name: Upload screenshots
       if: always()
