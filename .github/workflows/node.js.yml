@@ -22,8 +22,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: sudo apt-get install -y xvfb libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xinput0 libxcb-xfixes0     
-    - run: |
-        # start xvfb in the background
-        sudo /usr/bin/Xvfb $DISPLAY -screen 0 1440x900x24 &
-    - run: npm test
+    - run: sudo apt-get install -y xvfb
+    - run: xvfb-run -s "-ac -screen 0 1440x900x24" --auto-servernum npm test
