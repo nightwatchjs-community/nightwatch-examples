@@ -22,6 +22,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: mkdir -p screens
     
     - name: Start Xvfb
       run: |
