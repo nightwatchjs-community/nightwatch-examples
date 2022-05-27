@@ -22,11 +22,9 @@
     "url": "https://github.com/nightwatchjs/nightwatch-examples/issues"
   },
   "homepage": "https://github.com/nightwatchjs/nightwatch-examples#readme",
-  "devDependencies": {
-    "chromedriver": "^97.0.2",
-    "nightwatch": "^2.0.7"
-  },
   "dependencies": {
-    "@cucumber/cucumber": "^7.3.2"
+    "@cucumber/cucumber": "^8.2.1",
+    "chromedriver": "^101.0.0",
+    "nightwatch": "^2.1.7"
   }
 }
