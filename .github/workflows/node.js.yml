@@ -26,7 +26,9 @@ jobs:
     - run: sudo apt-get install xvfb
     - name: Run Nightwatch tests
       run: xvfb-run --auto-servernum npm test -- --env chrome
+      
     - name: "Publish test results"
+      if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with: 
         github_token: ${{ secrets.GITHUB_TOKEN }}
