@@ -40,7 +40,8 @@ Nightwatch 2.2 brings its own HTML reporter which better aggregate test results 
 
 ### Publishing HTML Test Report using Github
 Github actions can be used to run your nightwatch tests and publish your test report to Github Pages
-Here is the [test report](https://nightwatchjs.github.io/nightwatch-examples) generated using Github Actions and Pages
+Here is the [test report](https://nightwatchjs.github.io/nightwatch-examples) generated using Github Actions and Pages.
+
 Checkout the [Blog](https://nightwatchjs.org/blog/publish-your-nightwatch-html-report-on-github-pages/) about setting up Nightwatch tests on Github Actions and publishing test report on Github Pages
 
 
