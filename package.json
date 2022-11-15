@@ -24,7 +24,7 @@
   "homepage": "https://github.com/nightwatchjs/nightwatch-examples#readme",
   "dependencies": {
     "@cucumber/cucumber": "^8.2.1",
-    "chromedriver": "^103.0.0",
-    "nightwatch": "^2.2.2"
+    "chromedriver": "^107.0.3",
+    "nightwatch": "^2.5.0"
   }
 }

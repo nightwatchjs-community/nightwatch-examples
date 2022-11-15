@@ -10,21 +10,21 @@ describe('sample google search', function() {
     if (consentPresent === true) {
       browser
         .waitForElementVisible('[aria-modal="true"][aria-label="Before you continue to Google Search"]')
-                .click('[aria-modal="true"] div.VDity button:nth-child(1)')
+        .click({selector: '[aria-modal="true"] button', index: 2})
 
         // Wait until we are on consent page
-        .expect.url().toContain('https://consent.google.no')
+        //.expect.url().toContain('https://consent.google.no')
 
         // Turn everything off
-        .click('button[aria-label="Turn off Search customization"]')
-        .click('button[aria-label="Turn off YouTube History"]')
-        .click('button[aria-label="Turn off Ad personalization"]')
+        //.click('button[aria-label="Turn off Search customization"]')
+        //.click('button[aria-label="Turn off YouTube History"]')
+        //.click('button[aria-label="Turn off Ad personalization"]')
 
         // click on confirm button
-        .click('form[action^="https://consent.google.no"] button')
+        //.click('form[action^="https://consent.google.no"] button')
 
         // saving the consent form takes some time, no need to check for anything else
-        .pause(1000);
+        //.pause(1000);
     }
 
     await browser
