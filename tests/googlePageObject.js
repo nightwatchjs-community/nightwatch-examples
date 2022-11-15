@@ -1,6 +1,6 @@
 describe('google search with consent form - page objects', function() {
 
-  this.disabled = this.argv.env !== 'chrome';
+  this.disabled = true;
 
   const homePage = browser.page.google.search();
   const consentPage = browser.page.google.consent();
