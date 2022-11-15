@@ -26,6 +26,8 @@ This will run the tests in Chrome:
 npm test
 ```
 
+The generated HTML report is deployed automatically to:
+https://nightwatchjs.github.io/nightwatch-examples
 
 [discord-badge]: https://img.shields.io/discord/618399631038218240.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff&style=flat-square
 [discord]: https://discord.gg/SN8Da2X
