@@ -25,6 +25,6 @@
   "dependencies": {
     "@cucumber/cucumber": "^8.2.1",
     "chromedriver": "^107.0.3",
-    "nightwatch": "^2.5.0"
+    "nightwatch": "^2.6.1"
   }
 }
