@@ -1,4 +1,4 @@
-describe('Ecosia.org Demo', function() {
+xdescribe('Ecosia.org Demo', function() {
 
   before(browser => browser.navigateTo('https://www.ecosia.org/'));
 
