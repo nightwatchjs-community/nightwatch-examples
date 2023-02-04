@@ -30,7 +30,7 @@ module.exports = {
   plugins: [],
 
   // See https://nightwatchjs.org/guide/#external-globals
-  globals_path : '',
+  //globals_path : 'lib/globals.js',
 
   webdriver: {},
 
@@ -51,6 +51,10 @@ module.exports = {
 
       webdriver: {
         start_process: true,
+        keep_alive: {
+          enabled: true,
+          keepAliveMsecs: 3000
+        },
         server_path: ''
       }
     },
