@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@nightwatch/selenium-server": "^4.5.0",
-    "chromedriver": "^109.0.0",
-    "nightwatch-axe-verbose": "^2.1.0"
+    "chromedriver": "^109.0.0"
   }
 }
