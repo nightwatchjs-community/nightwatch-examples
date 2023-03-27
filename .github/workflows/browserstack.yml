@@ -21,6 +21,7 @@ jobs:
           node-version: 18
           cache: 'npm'
       - run: npm ci
+      - run: npm install nightwatch@latest
       - name: Run tests
         run: npm test -- --env browserstack
 
