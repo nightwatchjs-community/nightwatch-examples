@@ -1,0 +1,28 @@
+name: 'run all tests against cloud provider'
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs: 
+  ubuntu-job: 
+    name: 'Run tests - browserstack'
+    runs-on: ubuntu-latest
+    steps: 
+
+      - name: 'Browserstack env setup'
+        uses: browserstack/github-actions/setup-env@master
+        with:
+          username: ${{BROWSERSTACK_USERNAME}}
+          access-key: ${{BROWSERSTACK_ACCESS_KEY}}
+
+      - name: 'Nightwatch tests'
+        uses: actions/checkout@v2
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - run: npm install nightwatch@latest
+      - name: Run tests
+        run: npm test -- --env browserstack
+
+
