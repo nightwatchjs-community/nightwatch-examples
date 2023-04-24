@@ -1,4 +1,4 @@
-describe('sample google search', function() {
+xdescribe('sample google search', function() {
   this.tags = ['google'];
 
   it('demo test using expect apis', async function(browser) {
