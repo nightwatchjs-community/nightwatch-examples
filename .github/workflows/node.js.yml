@@ -29,16 +29,16 @@ jobs:
     - name: Run Nightwatch tests
       run: xvfb-run --auto-servernum npm test -- --env chrome
       
-    - name: "Publish test results"
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3.7.3
-      with: 
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: './tests_output/nightwatch-html-report'
-        force_orphan: true
-        keep_files: true
-        user_name: "gravityvi"
-        user_email: "ravisawlani04@gmail.com"
+#     - name: "Publish test results"
+#       if: always()
+#       uses: peaceiris/actions-gh-pages@v3.7.3
+#       with: 
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         publish_dir: './tests_output/nightwatch-html-report'
+#         force_orphan: true
+#         keep_files: true
+#         user_name: "gravityvi"
+#         user_email: "ravisawlani04@gmail.com"
 
     - name: Upload screenshots
       if: always()
