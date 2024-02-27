@@ -1,6 +1,6 @@
 describe('.closeWindow() example test', function () {
 
-  beforeEach(browser => browser.navigateTo('https://nightwatchjs.org/__e2e/window/'));
+  beforeEach(browser => browser.navigateTo('https://the-internet.herokuapp.com/windows'));
   afterEach(browser => browser.end());
 
   it('basic window test', function (browser) {
@@ -8,7 +8,8 @@ describe('.closeWindow() example test', function () {
       .windowHandles(result => {
         expect(result.value).to.have.length(1);
       })
-      .click('#openWindowBttn')
+      .waitForElementVisible('a[target="_blank"]', 1000)
+      .click('a[target="_blank"]')
       .windowHandles(result => {
         expect(result.value).to.have.length(2);
       })
@@ -22,7 +23,9 @@ describe('.closeWindow() example test', function () {
   });
 
   it('async window test', async function (browser) {
-    await browser.click('#openWindowBttn');
+    await browser
+      .waitForElementVisible('a[target="_blank"]', 1000)
+      .click('a[target="_blank"]')
 
     let windowHandles = await browser.windowHandles();
     expect(windowHandles).to.have.length(2);
