@@ -5,7 +5,6 @@ describe('frame() example test', function () {
 
     browser
       .navigateTo('https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe')
-      .ensure.ableToSwitchToFrame(frameId)
       .frame(frameId, function (result) {
         console.log(result);
       })

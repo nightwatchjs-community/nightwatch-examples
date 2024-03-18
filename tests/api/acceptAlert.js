@@ -1,7 +1,9 @@
 test('acceptAlert() example test', function (browser) {
+  const buttonSelector = 'button[onclick="jsAlert()"]';
+
   browser
-    .navigateTo('https://nightwatchjs.org/__e2e/window/alerts.html')
-    .click('#show-alert')
+    .navigateTo('https://the-internet.herokuapp.com/javascript_alerts')
+    .click(buttonSelector)
     .ensure.alertIsPresent('> there is an alert open')
     .pause(500)
     .acceptAlert()

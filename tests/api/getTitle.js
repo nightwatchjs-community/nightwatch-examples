@@ -4,6 +4,6 @@ describe('getTitle() example test', function () {
 
   it('demo test', async function (browser) {
     const title = await browser.getTitle();
-    await browser.assert.equal(title, 'Nightwatch.js | Node.js powered End-to-End testing framework');
+    await browser.assert.equal(title, 'Nightwatch V3 | Node.js powered End-to-End testing framework');
   });
 });

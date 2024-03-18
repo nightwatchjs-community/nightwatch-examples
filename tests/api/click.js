@@ -4,7 +4,7 @@ describe('.click() example test', function () {
     pageLoadStrategy: 'eager'
   };
 
-  const githubButton = 'a[aria-label="Nightwatch on Github"]';
+  const githubButton = 'a[href="https://github.com/nightwatchjs/"]';
 
   before(browser => browser.navigateTo('https://nightwatchjs.org/'));
 
